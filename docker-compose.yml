@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  speech-processing:
+    build: .
+    volumes:
+      - ./config:/app/config
+    ports:
+      - "8030:8030"
+    environment:
+      - CONFIG_PATH=/app/config/polyphonic_word_config.json
